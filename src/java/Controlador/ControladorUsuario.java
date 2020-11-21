@@ -17,13 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ControladorUsuario extends HttpServlet {
 
-    String listarProductos="vistas/listarProductos.jsp";
-    String addProductos="vistas/addProducto.jsp";
-    String editProductos="vistas/editProducto.jsp";
+    
     String menu="menu.jsp";
-    String listarUsuarios="vistas/listarUsuarios.jsp";
-    String addUsuario="vistas/addUsuarios.jsp";
-    String editUsuario="vistas/editUsuario.jsp";
+    String listarUsuarios="vistas/Usuario/listarUsuarios.jsp";
+    String addUsuario="vistas/Usuario/addUsuarios.jsp";
+    String editUsuario="vistas/Usuario/editUsuario.jsp";
     Producto p=new Producto();
     ProductoDAO dao=new ProductoDAO();
     Usuario u=new Usuario();
@@ -56,7 +54,10 @@ public class ControladorUsuario extends HttpServlet {
         acceso=listarUsuarios;
         }else if(action.equalsIgnoreCase("addUsuario")){
             acceso=addUsuario;
-        }
+        }else if(action.equalsIgnoreCase("menu"))
+        {
+                acceso=menu;
+                }
         else if(action.equalsIgnoreCase("AgregarUsuario")){
             
             String nom=request.getParameter("dui");

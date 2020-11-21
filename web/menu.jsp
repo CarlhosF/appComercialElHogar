@@ -82,7 +82,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center"><a href="">Easy to work with</a> </h5>
+            <h5 class="center"><a href="ClienteControlador?accion=ListarCliente">GESTION DE CLIENTES</a> </h5>
 
             
           </div>

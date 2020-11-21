@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>Controlador2</servlet-name>
-        <servlet-class>Controlador.Controlador2</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Validar</servlet-name>
         <servlet-class>Controlador.Validar</servlet-class>
     </servlet>
@@ -16,10 +12,10 @@
         <servlet-name>ControladorProducto</servlet-name>
         <servlet-class>Controlador.ControladorProducto</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>Controlador2</servlet-name>
-        <url-pattern>/Controlador2</url-pattern>
-    </servlet-mapping>
+    <servlet>
+        <servlet-name>ClienteControlador</servlet-name>
+        <servlet-class>Controlador.ClienteControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validar</servlet-name>
         <url-pattern>/Validar</url-pattern>
@@ -31,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ControladorProducto</servlet-name>
         <url-pattern>/ControladorProducto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteControlador</servlet-name>
+        <url-pattern>/ClienteControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

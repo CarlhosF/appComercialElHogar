@@ -16,13 +16,10 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ControladorProducto extends HttpServlet {
 
-    String listarProductos="vistas/listarProductos.jsp";
-    String addProductos="vistas/addProducto.jsp";
-    String editProductos="vistas/editProducto.jsp";
+    String listarProductos="vistas/Producto/listarProductos.jsp";
+    String addProductos="vistas/Producto/addProducto.jsp";
+    String editProductos="vistas/Producto/editProducto.jsp";
     String menu="menu.jsp";
-    String listarUsuarios="vistas/listarUsuarios.jsp";
-    String addUsuario="vistas/addUsuarios.jsp";
-    String editUsuario="vistas/editUsuario.jsp";
     Producto p=new Producto();
     ProductoDAO dao=new ProductoDAO();
     Usuario u=new Usuario();
@@ -53,7 +50,10 @@ public class ControladorProducto extends HttpServlet {
         String action=request.getParameter("accion");
         if(action.equalsIgnoreCase("listarProducto")){
             acceso=listarProductos;            
-        }else if(action.equalsIgnoreCase("menu")){
+        }else if(action.equalsIgnoreCase("menu"))
+        {
+                acceso=menu;
+                }else if(action.equalsIgnoreCase("menu")){
             acceso=menu;
         }else if(action.equalsIgnoreCase("addProducto")){
             acceso=addProductos;
